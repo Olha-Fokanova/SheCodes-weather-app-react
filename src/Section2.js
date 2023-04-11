@@ -9,11 +9,21 @@ export default function Section2() {
           <span className="number" id="temp-integer">
             +3
           </span>
-          <a href="#" className="degree active" id="celsius">
+          <a
+            href="#"
+            className="degree active"
+            id="celsius"
+            rel="noopener noreferrer"
+          >
             °C
           </a>
           <span className="degree-slash">/</span>
-          <a href="#" className="degree" id="fahrenheit">
+          <a
+            href="#"
+            className="degree"
+            id="fahrenheit"
+            rel="noopener noreferrer"
+          >
             °F
           </a>
         </div>
