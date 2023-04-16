@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import FormatDate from "./FormatDate";
 
 export default function Header() {
   return (
@@ -7,7 +8,7 @@ export default function Header() {
       <div className="header-container">
         <h1 id="city-name">Poltava</h1>
 
-        <h2 id="date">Sunday, December 4, 14:18</h2>
+        <h2 id="date">{FormatDate()}</h2>
         <small>Last updated</small>
         <h3 id="description"></h3>
       </div>
