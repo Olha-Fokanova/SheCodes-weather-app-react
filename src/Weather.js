@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Temperature from "./Temperature";
 
 export default function Weather(props) {
+  const windDirStyle = `rotate(${props.data.windDirection ?? 0}deg)`;
+
   return (
     <section className="main-section">
       <div className="main-section-container">
@@ -17,7 +19,9 @@ export default function Weather(props) {
           </div>
           <div className="wind">
             Wind: <span id="wind">{props.data.wind}</span> km/h
-            <span id="wind-direction">⬇️</span>
+            <span id="wind-direction" style={{ transform: windDirStyle }}>
+              ⬇️
+            </span>
           </div>
         </div>
         <div className="rectangle-btn-container">

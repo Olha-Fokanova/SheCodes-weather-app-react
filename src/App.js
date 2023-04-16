@@ -57,7 +57,7 @@ export default function App(props) {
       updated: FormatDate(response.data.dt * 1000),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      windDirection: `rotate(${response.data.wind.deg}deg)`,
+      windDirection: response.data.wind.deg,
     });
 
     setCity(response.data.name);
