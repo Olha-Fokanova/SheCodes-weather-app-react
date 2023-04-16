@@ -43,7 +43,9 @@ export default function Temperature(props) {
     let fahrenheit = Math.round(temp * 1.8 + 32);
     return (
       <div className="info-container">
-        <div className="weather-icon"></div>
+        <div className="weather-icon">
+          <img src={icon} />
+        </div>
 
         <span className="number" id="temp-integer">
           {fahrenheit}
