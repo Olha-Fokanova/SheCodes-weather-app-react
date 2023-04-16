@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Section2() {
+export default function WeatherSection() {
   return (
     <section className="main-section">
       <div className="main-section-container">

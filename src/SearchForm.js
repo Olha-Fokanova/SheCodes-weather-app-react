@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Section1() {
+export default function SearchForm() {
   return (
     <section className="main-section">
       <div className="main-section-container">

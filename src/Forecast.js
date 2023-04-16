@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Section3() {
+export default function Forecast() {
   return (
     <footer>
       <div className="footer-container" id="hours">

@@ -3,9 +3,9 @@ import React from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Header from "./Header";
-import Section1 from "./Section1";
-import Section2 from "./Section2";
-import Section3 from "./Section3";
+import SearchForm from "./SearchForm";
+import Weather from "./Weather";
+import Forecast from "./Forecast";
 import Footer from "./Footer";
 
 const rootElement = document.getElementById("root");
@@ -15,9 +15,9 @@ root.render(
   <StrictMode>
     <div className="container">
       <Header />
-      <Section1 />
-      <Section2 />
-      <Section3 />
+      <SearchForm />
+      <Weather />
+      <Forecast />
       <Footer />
     </div>
   </StrictMode>
