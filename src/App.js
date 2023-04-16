@@ -21,6 +21,7 @@ export default function App(props) {
     wind: 5,
     humidity: 75,
     description: "Overcast clouds",
+    icon: "src/icons/01d.png",
     updated: FormatDate(),
   });
 
@@ -52,7 +53,7 @@ export default function App(props) {
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
-      icon: `<img src="src/icons/${response.data.weather[0].icon}.png"/>`,
+      icon: `src/icons/${response.data.weather[0].icon}.png`,
       updated: FormatDate(response.data.dt * 1000),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,

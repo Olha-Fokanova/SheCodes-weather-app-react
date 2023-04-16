@@ -5,7 +5,11 @@ export default function Weather(props) {
   return (
     <section className="main-section">
       <div className="main-section-container">
-        <Temperature temp={props.data.temperature} format={props.data.format} />
+        <Temperature
+          temp={props.data.temperature}
+          format={props.data.format}
+          icon={props.data.icon}
+        />
 
         <div className="humidity-wind-container">
           <div className="humidity">

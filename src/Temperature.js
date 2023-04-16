@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 export default function Temperature(props) {
-  let temp = props.temp;
+  const temp = props.temp;
+  const icon = props.icon;
 
   let [format, setFormat] = useState(props.format);
 
@@ -18,7 +19,9 @@ export default function Temperature(props) {
   if (format === "°C") {
     return (
       <div className="info-container">
-        <div className="weather-icon"></div>
+        <div className="weather-icon">
+          <img src={icon} />
+        </div>
 
         <span className="number" id="temp-integer">
           {temp}
