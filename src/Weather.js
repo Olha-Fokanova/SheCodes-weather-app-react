@@ -1,38 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import Temperature from "./Temperature";
 
-export default function WeatherSection() {
+export default function Weather(props) {
   return (
     <section className="main-section">
       <div className="main-section-container">
-        <div className="info-container">
-          <div className="weather-icon"></div>
-          <span className="number" id="temp-integer">
-            +3
-          </span>
-          <a
-            href="#"
-            className="degree active"
-            id="celsius"
-            rel="noopener noreferrer"
-          >
-            °C
-          </a>
-          <span className="degree-slash">/</span>
-          <a
-            href="#"
-            className="degree"
-            id="fahrenheit"
-            rel="noopener noreferrer"
-          >
-            °F
-          </a>
-        </div>
+        <Temperature temp={props.temp} format={props.format} />
+
         <div className="humidity-wind-container">
           <div className="humidity">
-            Humidity: <span id="humidity">75</span>%
+            Humidity: <span id="humidity">{props.humidity}</span>%
           </div>
           <div className="wind">
-            Wind: <span id="wind">5</span> km/h
+            Wind: <span id="wind">{props.wind}</span> km/h
             <span id="wind-direction">⬇️</span>
           </div>
         </div>

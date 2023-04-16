@@ -16,7 +16,7 @@ root.render(
     <div className="container">
       <Header />
       <SearchForm />
-      <Weather />
+      <Weather temp="3" format="°C" wind={5} humidity={75} />
       <Forecast />
       <Footer />
     </div>
