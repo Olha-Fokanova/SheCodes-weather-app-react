@@ -5,14 +5,14 @@ export default function Weather(props) {
   return (
     <section className="main-section">
       <div className="main-section-container">
-        <Temperature temp={props.temp} format={props.format} />
+        <Temperature temp={props.data.temperature} format={props.data.format} />
 
         <div className="humidity-wind-container">
           <div className="humidity">
-            Humidity: <span id="humidity">{props.humidity}</span>%
+            Humidity: <span id="humidity">{props.data.humidity}</span>%
           </div>
           <div className="wind">
-            Wind: <span id="wind">{props.wind}</span> km/h
+            Wind: <span id="wind">{props.data.wind}</span> km/h
             <span id="wind-direction">⬇️</span>
           </div>
         </div>

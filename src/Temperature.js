@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 
 export default function Temperature(props) {
-  let [temp, setTemp] = useState(props.temp);
+  let temp = props.temp;
+
   let [format, setFormat] = useState(props.format);
 
   function changeToCelsius(event) {
     event.preventDefault();
-    setTemp(Math.round((temp - 32) / 1.8));
     setFormat("°C");
   }
 
   function changeToFahrenheit(event) {
     event.preventDefault();
-    setTemp(Math.round(temp * 1.8 + 32));
     setFormat("°F");
   }
 
@@ -38,12 +37,13 @@ export default function Temperature(props) {
       </div>
     );
   } else {
+    let fahrenheit = Math.round(temp * 1.8 + 32);
     return (
       <div className="info-container">
         <div className="weather-icon"></div>
 
         <span className="number" id="temp-integer">
-          {temp}
+          {fahrenheit}
           {format}
         </span>
 
